@@ -5,7 +5,7 @@
     "games",
     "minecraft"
   ],
-  "repository": "https://github.com/jkutner/heroku-buildpack-minecraft",
+  "repository": "https://github.com/samsamart45/mchero",
   "env": {
     "MINECRAFT_EULA": {
       "description": "Do you accept the Minecraft EULA?",
@@ -13,6 +13,10 @@
     },
     "NGROK_API_TOKEN": {
       "description": "Your personal ngrok API token",
+      "required": true
+    },
+    "DROPBOX_API_TOKEN": {
+      "description": "Your personal dropbox API token",
       "required": true
     },
     "AWS_BUCKET": {
@@ -34,6 +38,9 @@
     },
     {
       "url": "https://github.com/kr/heroku-buildpack-inline.git"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
     }
   ]
 }
