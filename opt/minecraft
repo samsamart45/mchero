@@ -22,9 +22,9 @@ sync_pid=$!
 
 # Do an inline Dropbox sync first, then start the background job
 echo "Starting Dropbox sync..."
-bin/restore
-eval "while true; do sleep ${AWS_SYNC_INTERVAL:-60}; bin/uploader; done &"
-dropbox_pid=$!
+# bin/restore
+# eval "while true; do sleep ${AWS_SYNC_INTERVAL:-60}; bin/uploader; done &"
+# dropbox_pid=$!
 
 # create server config
 echo "online-mode=false" >> /app/server.properties
