@@ -78,7 +78,7 @@ fi
 
 if [ -n "${DROPBOX_API_TOKEN:-""}" ]; then
   echo -n "-----> DROPBOX OAUTH... "
-  echo "OAUTH_ACCESS_TOKEN=".${DROPBOX_API_TOKEN:-""} >> $BUILD_DIR/.dropbox_uploader
+  echo "OAUTH_ACCESS_TOKEN="${DROPBOX_API_TOKEN:-""} >> $BUILD_DIR/.dropbox_uploader
   echo "done"
 fi
 
