@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+echo "!----- Restore Syncing files to Dropbox -----!"
+bin/dropbox_uploader download /mchero/backup.zip /app/backup.zip
+sleep 3
+unzip -o backup.zip -d /
+sleep 3
+rm backup.zip
