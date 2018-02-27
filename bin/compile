@@ -90,4 +90,4 @@ mkdir -p $BUILD_DIR/bin
 
 chmod +x $BUILD_DIR/bin/minecraft
 chmod +x $BUILD_DIR/bin/sync
-chmod +x $BUILD_DIR/bin/dropobox_uploader
+chmod +x $BUILD_DIR/bin/dropbox_uploader
