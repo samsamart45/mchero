@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "!----- Backup Syncing files to Dropbox -----!"
 #zip -9 -r backup.zip /app/*.json /app/world /app/world_nether /app/world_the_end /app/plugins
-zip -9 -r test.zip /app/*.json `echo /app/*/ | sed 's/\/app\/bin\/ //' | sed 's/\/app\/logs\/ //'`
+zip -9 -r backup.zip /app/*.json `echo /app/*/ | sed 's/\/app\/bin\/ //' | sed 's/\/app\/logs\/ //'`
 sleep 3
 bin/dropbox_uploader upload backup.zip /mchero
 rm backup.zip
