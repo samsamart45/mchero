@@ -46,8 +46,15 @@ case $limit in
   ;;
 esac
 
+if [ -f /app/forge.jar ]; then
+   MINECRAFT_CMD=forge.jar
+else
+   MINECRAFT_CMD=minecraft.jar
+fi
+
+
 echo "Starting: minecraft ${mc_port}"
-eval "screen -L -h 2048 -dmS minecraft java -Xmx${heap} -Xms${heap} -jar minecraft.jar nogui"
+eval "screen -L -h 2048 -dmS minecraft java -Xmx${heap} -Xms${heap} -jar ${MINECRAFT_CMD} nogui"
 main_pid=$!
 
 # Flush the logfile every second, and ensure that the logfile exists
